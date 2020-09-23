@@ -25,8 +25,9 @@ while True:
         f.write(recvImg)
     else:
         print('\nRecibido')
+        f.close()
         # reenvio
-        f_new = open("img.png", "rb")
+        f_new = open("recibido.png", "rb")
         content = f_new.read()
         print("Empezar a reenviar")
         while content:
@@ -39,5 +40,5 @@ while True:
 
 
 conn.close()
-f.close()   
+# f.close()   
 f_new.close()
